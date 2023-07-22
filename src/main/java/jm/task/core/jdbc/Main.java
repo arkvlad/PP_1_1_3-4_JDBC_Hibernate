@@ -21,14 +21,6 @@ public class Main {
         userService.saveUser(testName, testLastName, testAge);
         userService.saveUser(testName, testLastName, testAge);
         userService.saveUser(testName, testLastName, testAge);
-
-        userService.cleanUsersTable();
-
-        userService.getAllUsers().forEach(System.out::println);
-        if (userService.getAllUsers().size() != 0) {
-            System.out.println("Метод очищения таблицы пользователей реализован не корректно");
-        }
-
     }
 }
 

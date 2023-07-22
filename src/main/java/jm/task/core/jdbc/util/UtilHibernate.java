@@ -13,6 +13,7 @@ public class UtilHibernate {
     private static final String URL = "jdbc:mysql://localhost:3306/mydbtest";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";
+    private static final String DIALECT = "org.hibernate.dialect.MySQLDialect";
     public SessionFactory getSessionFactory() {
         return this.sessionFactory;
     }
@@ -23,7 +24,7 @@ public class UtilHibernate {
         properties.put(Environment.URL, URL);
         properties.put(Environment.USER, USERNAME);
         properties.put(Environment.PASS, PASSWORD);
-        properties.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
+        properties.put(Environment.DIALECT, DIALECT);
         this.sessionFactory = new Configuration()
                 .setProperties(properties)
                 .addAnnotatedClass(User.class)
