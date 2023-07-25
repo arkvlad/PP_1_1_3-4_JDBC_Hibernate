@@ -20,7 +20,7 @@ public class Main {
         userService.saveUser("Pidor", "Orehov", (byte) 29);
         userService.saveUser("Larion", "Jukov", (byte) 17);
 
-//        Получение всех User из базы и вывод в консоль ( должен быть переопределен toString в классе User)
+//        Получение всех User из базы и вывод в консоль (должен быть переопределен toString в классе User)
         userService.getAllUsers().forEach(System.out::println);
 
 //        Очистка таблицы User(ов)

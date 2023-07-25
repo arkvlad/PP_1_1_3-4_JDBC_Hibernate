@@ -21,7 +21,6 @@ public class UserDaoHibernateImpl implements UserDao {
         this.sessionFactory = new UtilHibernate().getSessionFactory();
     }
 
-
     @Override
     public void createUsersTable() {
         try (Session session = sessionFactory.openSession()) {
